@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  php:
+    #image: wordpress:5.9.0-fpm
+    build: .
+    volumes:
+      - ../.vscode-server:/root/.vscode-server
+      - ../.vscode-server-insiders:/root/.vscode-server-insiders
+      - ../html:/var/www/html
+    ports:
+      - 9000:9000
+      - 8080:80
+    restart: unless-stopped
