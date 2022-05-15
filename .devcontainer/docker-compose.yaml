@@ -8,6 +8,7 @@ services:
       - ../.vscode-server:/root/.vscode-server
       - ../.vscode-server-insiders:/root/.vscode-server-insiders
       - ../html:/var/www/html
+      - ../bin:/root/bin
     ports:
       - 9000:9000
       - 8080:80
